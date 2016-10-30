@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ContactManager.Models.Companies>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyZip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyArea)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyZip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyArea)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CompanyId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CompanyId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CompanyId })
+        </td>
+    </tr>
+}
+
+</table>

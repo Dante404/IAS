@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    @if (!User.Identity.IsAuthenticated)
+    {
+    <div id="background">
+        <img src="http://imgview.info/download/20150423/high-tech-wallpaper-1920x1080.jpg" />
+    </div>
+    }

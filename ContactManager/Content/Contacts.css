@@ -1,0 +1,43 @@
+﻿tr {
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+}
+td {
+    padding: 10px;
+    margin: 30px;
+}
+
+#contacts {
+    list-style-type: none;
+    margin: 30px;
+    padding: 30px;
+    float:left;
+    width: 100%;
+}
+
+#contacts td
+{
+    padding: 10px;
+    margin: 10px;
+    background-image: none;
+    background-color: darkorange;
+    color: White;
+    font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+    font-size:large
+}
+
+#footer {
+    padding-top: 50px;
+}
+
+#p {
+    padding-top: 30px;
+}
+
+#background
+{
+    padding-left: -50px;
+    padding-top: 0px;
+    margin-left: -380px;
+}
