@@ -1,4 +1,4 @@
-Aplikacja ContactManager
+Aplikacja ContactManager api rest
 
 Baza Danych 1: Model napisany w c# który za pomocą seed'u uzupełnia lokalną bazę danych Sql server express LocalDB, są w niej kontakty
 w języku angielskim
