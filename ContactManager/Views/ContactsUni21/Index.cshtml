@@ -26,6 +26,15 @@
                 @Html.DisplayNameFor(model => model.Contact.CompanyId)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Company.CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company.CompanyCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company.CompanyArea)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Contatti.ContattoID)
             </th>
             <th>
@@ -39,15 +48,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Contatti.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Company.CompanyName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Company.CompanyCity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Company.CompanyArea)
             </th>
         </tr>
 
@@ -68,24 +68,10 @@
                     <td>
                         @item.Contacts[i].CompanyId
                     </td>
-                    <td>
-                        @item.Contattis[i].ContattoID
-                    </td>
-                    <td>
-                        @item.Contattis[i].Nome
-                    </td>
-                    <td>
-                        @item.Contattis[i].Citta
-                    </td>
-                    <td>
-                        @item.Contattis[i].CodicePostale
-                    </td>
-                    <td>
-                        @item.Contattis[i].Email
-                    </td>
-                    
-                    @if (@item.Companies[i].CompanyId == @item.Contacts[i].CompanyId)
-                    {
+                        @for (int a = 0; a < item.Companies.Count; a++)
+                        {
+                            if (@item.Contacts[i].CompanyId == item.Companies[a].CompanyId)
+                            {
                         <td>
                             @item.Companies[i].CompanyName
                         </td>
@@ -95,46 +81,37 @@
                         <td>
                             @item.Companies[i].CompanyArea
                         </td>
-                    }
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ContattoID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.ContattoID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ContattoID })
-                    </td>
+                            }
+                        }
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            @item.Contattis[i].ContattoID
+                        </td>
+                        <td>
+                            @item.Contattis[i].Nome
+                        </td>
+                        <td>
+                            @item.Contattis[i].Citta
+                        </td>
+                        <td>
+                            @item.Contattis[i].CodicePostale
+                        </td>
+                        <td>
+                            @item.Contattis[i].Email
+                        </td>
                 </tr>
-                }
-            
 
-            /*for (int i = 0; i < @item.Contattis.Count(); i++)
-            {
-                <tr>
-                     <td>
-                        @item.Contattis[i].ContattoID
-                        @item.Contattis[i].Nome
-                        @item.Contattis[i].Citta
-                        @item.Contattis[i].CodicePostale
-                        @item.Contattis[i].Email
-                      <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ContattoID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.ContattoID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ContattoID })
-                    </td>
-                </tr>
-            }*/
-           /* for (int b = 0; b < @item.Companies.Count(); b++)
-            {
-                <tr>
-                    <td>
-                        @item.Companies[b].CompanyName
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ContattoID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.ContattoID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ContattoID })
-                    </td>
-                </tr>
+
             }
-        */}
+        }
 
     </table>
 
