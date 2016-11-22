@@ -80,6 +80,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -216,6 +217,13 @@
     <Compile Include="Controllers\Contacts1Controller.cs" />
     <Compile Include="Controllers\Contacts2Controller.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\ContactsUni21Controller.cs" />
+    <Compile Include="Controllers\ContactsUni2Controller.cs" />
+    <Compile Include="Controllers\ContactsUni3Controller.cs" />
+    <Compile Include="Controllers\ContactsUnis1Controller.cs" />
+    <Compile Include="Controllers\ContactsUnis2Controller.cs" />
+    <Compile Include="Controllers\ContactsUnis3Controller.cs" />
+    <Compile Include="Controllers\ContactsUnisController.cs" />
     <Compile Include="Controllers\ContattisController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -234,10 +242,77 @@
     <Compile Include="Migrations\201610101238388_companies.Designer.cs">
       <DependentUpon>201610101238388_companies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611201429446_mymigration.cs" />
+    <Compile Include="Migrations\201611201429446_mymigration.Designer.cs">
+      <DependentUpon>201611201429446_mymigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611201854545_mymigration2.cs" />
+    <Compile Include="Migrations\201611201854545_mymigration2.Designer.cs">
+      <DependentUpon>201611201854545_mymigration2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611201859295_mymigration3.cs" />
+    <Compile Include="Migrations\201611201859295_mymigration3.Designer.cs">
+      <DependentUpon>201611201859295_mymigration3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611201943140_mymigration4.cs" />
+    <Compile Include="Migrations\201611201943140_mymigration4.Designer.cs">
+      <DependentUpon>201611201943140_mymigration4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611201957154_mymigration5.cs" />
+    <Compile Include="Migrations\201611201957154_mymigration5.Designer.cs">
+      <DependentUpon>201611201957154_mymigration5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611202004112_mymigration6.cs" />
+    <Compile Include="Migrations\201611202004112_mymigration6.Designer.cs">
+      <DependentUpon>201611202004112_mymigration6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611202026456_mymigration7.cs" />
+    <Compile Include="Migrations\201611202026456_mymigration7.Designer.cs">
+      <DependentUpon>201611202026456_mymigration7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611202103395_mymigration8.cs" />
+    <Compile Include="Migrations\201611202103395_mymigration8.Designer.cs">
+      <DependentUpon>201611202103395_mymigration8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611202119158_mymigration9.cs" />
+    <Compile Include="Migrations\201611202119158_mymigration9.Designer.cs">
+      <DependentUpon>201611202119158_mymigration9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611210034336_mymigration10.cs" />
+    <Compile Include="Migrations\201611210034336_mymigration10.Designer.cs">
+      <DependentUpon>201611210034336_mymigration10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611210148094_mymigration101.cs" />
+    <Compile Include="Migrations\201611210148094_mymigration101.Designer.cs">
+      <DependentUpon>201611210148094_mymigration101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611210320350_mymigration12.cs" />
+    <Compile Include="Migrations\201611210320350_mymigration12.Designer.cs">
+      <DependentUpon>201611210320350_mymigration12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611210416525_mymigration13.cs" />
+    <Compile Include="Migrations\201611210416525_mymigration13.Designer.cs">
+      <DependentUpon>201611210416525_mymigration13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611211702428_mymigration14.cs" />
+    <Compile Include="Migrations\201611211702428_mymigration14.Designer.cs">
+      <DependentUpon>201611211702428_mymigration14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611212320316_mymigration15.cs" />
+    <Compile Include="Migrations\201611212320316_mymigration15.Designer.cs">
+      <DependentUpon>201611212320316_mymigration15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611220021304_mymigration16.cs" />
+    <Compile Include="Migrations\201611220021304_mymigration16.Designer.cs">
+      <DependentUpon>201611220021304_mymigration16.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Companies.cs" />
     <Compile Include="Models\Contacts.cs" />
+    <Compile Include="Models\ContactsUnified.cs" />
+    <Compile Include="Models\ContactsUnified2.cs" />
+    <Compile Include="Models\ContactsUnified3.cs" />
     <Compile Include="Models\Contatti.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -262,6 +337,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ContattiDB2.mdf" />
+    <Content Include="App_Data\ContattiDB2_log.ldf">
+      <DependentUpon>ContattiDB2.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Contacts.css" />
@@ -366,6 +445,26 @@
     <Content Include="Views\Contattis\Details.cshtml" />
     <Content Include="Views\Contattis\Edit.cshtml" />
     <Content Include="Views\Contattis\Index.cshtml" />
+    <Content Include="Views\ContactsUnis1\Create.cshtml" />
+    <Content Include="Views\ContactsUnis1\Delete.cshtml" />
+    <Content Include="Views\ContactsUnis1\Details.cshtml" />
+    <Content Include="Views\ContactsUnis1\Edit.cshtml" />
+    <Content Include="Views\ContactsUnis1\Index.cshtml" />
+    <Content Include="Views\ContactsUnis2\Create.cshtml" />
+    <Content Include="Views\ContactsUnis2\Delete.cshtml" />
+    <Content Include="Views\ContactsUnis2\Details.cshtml" />
+    <Content Include="Views\ContactsUnis2\Edit.cshtml" />
+    <Content Include="Views\ContactsUnis2\Index.cshtml" />
+    <Content Include="Views\ContactsUnis3\Create.cshtml" />
+    <Content Include="Views\ContactsUnis3\Delete.cshtml" />
+    <Content Include="Views\ContactsUnis3\Details.cshtml" />
+    <Content Include="Views\ContactsUnis3\Edit.cshtml" />
+    <Content Include="Views\ContactsUnis3\Index.cshtml" />
+    <Content Include="Views\ContactsUni21\Create.cshtml" />
+    <Content Include="Views\ContactsUni21\Delete.cshtml" />
+    <Content Include="Views\ContactsUni21\Details.cshtml" />
+    <Content Include="Views\ContactsUni21\Edit.cshtml" />
+    <Content Include="Views\ContactsUni21\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -391,10 +490,56 @@
     <EmbeddedResource Include="Migrations\201610101238388_companies.resx">
       <DependentUpon>201610101238388_companies.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611201429446_mymigration.resx">
+      <DependentUpon>201611201429446_mymigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611201854545_mymigration2.resx">
+      <DependentUpon>201611201854545_mymigration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611201859295_mymigration3.resx">
+      <DependentUpon>201611201859295_mymigration3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611201943140_mymigration4.resx">
+      <DependentUpon>201611201943140_mymigration4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611201957154_mymigration5.resx">
+      <DependentUpon>201611201957154_mymigration5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611202004112_mymigration6.resx">
+      <DependentUpon>201611202004112_mymigration6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611202026456_mymigration7.resx">
+      <DependentUpon>201611202026456_mymigration7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611202103395_mymigration8.resx">
+      <DependentUpon>201611202103395_mymigration8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611202119158_mymigration9.resx">
+      <DependentUpon>201611202119158_mymigration9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611210034336_mymigration10.resx">
+      <DependentUpon>201611210034336_mymigration10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611210148094_mymigration101.resx">
+      <DependentUpon>201611210148094_mymigration101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611210320350_mymigration12.resx">
+      <DependentUpon>201611210320350_mymigration12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611210416525_mymigration13.resx">
+      <DependentUpon>201611210416525_mymigration13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611211702428_mymigration14.resx">
+      <DependentUpon>201611211702428_mymigration14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611212320316_mymigration15.resx">
+      <DependentUpon>201611212320316_mymigration15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611220021304_mymigration16.resx">
+      <DependentUpon>201611220021304_mymigration16.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

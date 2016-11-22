@@ -1,0 +1,142 @@
+﻿@model IEnumerable<ContactManager.Models.ContactsUni2>
+@using System.Linq;
+@using System.Data.Entity;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Contacts Unified</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact.ContactId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact.CompanyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contatti.ContattoID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contatti.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contatti.Citta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contatti.CodicePostale)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contatti.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company.CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company.CompanyCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company.CompanyArea)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            for (int i = 0; i < item.Contacts.Count; i++)
+            {
+                <tr>
+                    <td>
+                        @item.Contacts[i].ContactId
+                    </td>
+                    <td>
+                        @item.Contacts[i].Name
+                    </td>
+                    <td>
+                        @item.Contacts[i].Address
+                    </td>
+                    <td>
+                        @item.Contacts[i].CompanyId
+                    </td>
+                    <td>
+                        @item.Contattis[i].ContattoID
+                    </td>
+                    <td>
+                        @item.Contattis[i].Nome
+                    </td>
+                    <td>
+                        @item.Contattis[i].Citta
+                    </td>
+                    <td>
+                        @item.Contattis[i].CodicePostale
+                    </td>
+                    <td>
+                        @item.Contattis[i].Email
+                    </td>
+                    
+                    @if (@item.Companies[i].CompanyId == @item.Contacts[i].CompanyId)
+                    {
+                        <td>
+                            @item.Companies[i].CompanyName
+                        </td>
+                        <td>
+                            @item.Companies[i].CompanyCity
+                        </td>
+                        <td>
+                            @item.Companies[i].CompanyArea
+                        </td>
+                    }
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ContattoID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ContattoID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ContattoID })
+                    </td>
+                </tr>
+                }
+            
+
+            /*for (int i = 0; i < @item.Contattis.Count(); i++)
+            {
+                <tr>
+                     <td>
+                        @item.Contattis[i].ContattoID
+                        @item.Contattis[i].Nome
+                        @item.Contattis[i].Citta
+                        @item.Contattis[i].CodicePostale
+                        @item.Contattis[i].Email
+                      <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ContattoID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ContattoID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ContattoID })
+                    </td>
+                </tr>
+            }*/
+           /* for (int b = 0; b < @item.Companies.Count(); b++)
+            {
+                <tr>
+                    <td>
+                        @item.Companies[b].CompanyName
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ContattoID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ContattoID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ContattoID })
+                    </td>
+                </tr>
+            }
+        */}
+
+    </table>
+
+</body>
+</html>

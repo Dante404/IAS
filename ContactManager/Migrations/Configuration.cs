@@ -112,6 +112,26 @@ namespace ContactManager.Migrations
                 },
                 new Companies
                 {
+                    CompanyName = "Millenium2",
+                    CompanyAddress = "9012 State st",
+                    CompanyCity = "Redmond",
+                    CompanyState = "WA",
+                    CompanyZip = "10999",
+                    CompanyId = 4,
+                    CompanyArea = "Banking",
+                },
+                new Companies
+                {
+                    CompanyName = "Millenium3",
+                    CompanyAddress = "9012 State st",
+                    CompanyCity = "Redmond",
+                    CompanyState = "WA",
+                    CompanyZip = "10999",
+                    CompanyId = 5,
+                    CompanyArea = "Banking",
+                },
+                new Companies
+                {
                     CompanyName = "Millenium",
                     CompanyAddress = "9012 State st",
                     CompanyCity = "Redmond",

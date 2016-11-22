@@ -11,9 +11,15 @@ namespace ContactManager.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+    using System.Data;
     
+
     public partial class Contatti
     {
+        [Key, ForeignKey("Contact")]
         public int ContattoID { get; set; }
         public string Nome { get; set; }
         public string Via { get; set; }
@@ -21,5 +27,7 @@ namespace ContactManager.Models
         public string Stato { get; set; }
         public string CodicePostale { get; set; }
         public string Email { get; set; }
+        [Required]
+        public virtual ICollection<Contact> Contact { get; set; }
     }
 }

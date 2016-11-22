@@ -33,5 +33,13 @@ namespace ContactManager.Models
         public System.Data.Entity.DbSet<ContactManager.Models.Contact> Contacts { get; set; }
 
         public System.Data.Entity.DbSet<ContactManager.Models.Companies> Companies { get; set; }
+
+        public System.Data.Entity.DbSet<ContactManager.Models.ContactsUni> ContactsUnis { get; set; }
+
+        public System.Data.Entity.DbSet<ContactManager.Models.ContactsUni2> ContactsUni2 { get; set; }
+
+        public System.Data.Entity.DbSet<ContactManager.Models.Contatti> Contattis { get; set; }
+
+        public System.Data.Entity.DbSet<ContactManager.ViewModels.ContactsUni3> ContactsUni3 { get; set; }
     }
 }
