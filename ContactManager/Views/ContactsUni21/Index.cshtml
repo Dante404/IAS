@@ -23,6 +23,12 @@
                 @Html.DisplayNameFor(model => model.Contact.Address)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Contact.Zip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact.Email)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Contact.CompanyId)
             </th>
             <th>
@@ -33,21 +39,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Company.CompanyArea)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contatti.ContattoID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contatti.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contatti.Citta)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contatti.CodicePostale)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Contatti.Email)
             </th>
         </tr>
 
@@ -66,32 +57,27 @@
                         @item.Contacts[i].Address
                     </td>
                     <td>
+                        @item.Contacts[i].Zip
+                    </td>
+                    <td>
+                        @item.Contacts[i].Email
+                    </td>
+                    <td>
                         @item.Contacts[i].CompanyId
                     </td>
-                        @for (int a = 0; a < item.Companies.Count; a++)
-                        {
-                            if (@item.Contacts[i].CompanyId == item.Companies[a].CompanyId)
-                            {
-                        <td>
-                            @item.Companies[i].CompanyName
-                        </td>
-                        <td>
-                            @item.Companies[i].CompanyCity
-                        </td>
-                        <td>
-                            @item.Companies[i].CompanyArea
-                        </td>
-                            }
-                        }
+                    <td>
+                        @item.Companies[i].CompanyName
+                    </td>
+                    <td>
+                        @item.Companies[i].CompanyCity
+                    </td>
+                    <td>
+                        @item.Companies[i].CompanyArea
+                    </td>
                     </tr>
+                if (item.Contattis[i].ContattoID == item.Contacts[i].ContactId)
+                {
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                         <td>
                             @item.Contattis[i].ContattoID
                         </td>
@@ -108,6 +94,7 @@
                             @item.Contattis[i].Email
                         </td>
                 </tr>
+                }
 
 
             }
